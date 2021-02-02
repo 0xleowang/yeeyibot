@@ -1,3 +1,16 @@
+######################################################
+# Usage:
+# 1. Install package: pip install robobrowser
+# 2. Fillin url/username/password
+# 2. Run script: python yeeyibot.py
+######################################################
+
+# patch for latest version
+import werkzeug
+werkzeug.cached_property = werkzeug.utils.cached_property
+import re
+re._pattern_type = re.Pattern
+
 from robobrowser import RoboBrowser
 from time import sleep, localtime, ctime, mktime
 from random import randint
